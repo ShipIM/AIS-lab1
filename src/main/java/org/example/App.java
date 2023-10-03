@@ -67,11 +67,6 @@ public class App {
             var targetQuery = new Query(new Compound(target, new Term[]{new Atom(entity), new Variable("X")}));
             var targetResults = targetQuery.allSolutions();
 
-            System.out.println(targetResults.length);
-            for (var targets : targetResults) {
-                System.out.println(targets);
-            }
-
             if (targetResults.length == 0) {
                 outputString.append(", you can ").append(target).append(" nothing with it.");
 
